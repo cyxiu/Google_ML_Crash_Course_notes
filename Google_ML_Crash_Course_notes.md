@@ -4,8 +4,7 @@ From this [exercise](https://developers.google.com/machine-learning/crash-course
 Sometimes, overfitting happens slowly. That's why early stopping does work.
 
 
-From:
-https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc
+Some nots on ROC from [here](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc).
 
 Interpretation of AUC of ROC is the probability: P(f(positive sample) > f(negative sample))
 i.e. the probability of the model assigning a higher score to a randomly selected positive   observation than a randomly selected negative observation.
