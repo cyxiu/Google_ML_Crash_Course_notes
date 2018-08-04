@@ -1,10 +1,6 @@
-Some thoughts from Google's Machine Learning Crash Course.
+Some thoughts from [Google's Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/).
 
-https://developers.google.com/machine-learning/crash-course/
-
-From this:
-https://developers.google.com/machine-learning/crash-course/regularization-for-simplicity/playground-exercise-examining-l2-regularization
-
+From this [exercise](https://developers.google.com/machine-learning/crash-course/regularization-for-simplicity/playground-exercise-examining-l2-regularization):
 Sometimes, overfitting happens slowly. That's why early stopping does work.
 
 
