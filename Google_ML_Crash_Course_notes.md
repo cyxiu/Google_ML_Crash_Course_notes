@@ -15,12 +15,9 @@ AUC is classification-threshold-invariant.
 Check for Prediction Bias, which is average of predictions - average of labels in data set. Never thought about it this way. You can also bucket data points and check bias for each bucket.
 
 Sparcity:
-L0 optimization is non-convex and NP-hard. Think the knapsack problem. Think of L2 vs L1 this way. Derivative of L2 penalty is 2*beta, which reduces a percentage of beta at each step. Derivative of L1 penalty is constant, which reduces a constant of beta at each step. This causes the sparsity of L1.
+L0 optimization is non-convex and NP-hard. Think the knapsack problem. Think of L2 vs L1 this way. Derivative of L2 penalty is 2\*beta, which reduces a percentage of beta at each step. Derivative of L1 penalty is constant, which reduces a constant of beta at each step. This causes the sparsity of L1.  I still like the corners of the level curves argument better.
 
-I still like the corners of the level curves argument better.
-
-This is an excellent exercise:
-https://developers.google.com/machine-learning/crash-course/introduction-to-neural-networks/playground-exercises
+An excellent exercise [here](https://developers.google.com/machine-learning/crash-course/introduction-to-neural-networks/playground-exercises)
 
 Some thoughts:
 A simple network is very sensitive to initialization. What is very interesting is that slightly increasing the complexity makes it less sensitive. That's a little counter-intuitive.
