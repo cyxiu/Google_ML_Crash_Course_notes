@@ -46,6 +46,14 @@ Candidate sampling helps training efficiency when you have too many output nodes
 
 In this [exercise](https://developers.google.com/machine-learning/crash-course/multi-class-neural-networks/programming-exercise):
 
-A nn with two hidden layer of 100 nodes was trained to recognize digits. The weights are visualized by plotting them on a grid same size as the input images. Though the network performs well, it's hard to make sense of the weights in the first layer.
+A nn with two hidden layers of 100 nodes each was trained to recognize digits. The weights are visualized by plotting them on a grid same size as the input images. Though the network performs well, it's hard to make sense of the weights in the first layer.
 
 ![image](./images/weights100_100.png)
+
+I also trained a one-hidden layer network with 20 hidden nodes, which performed only slightly worse. I was hoping to see the weights become easier to interprete, but was disappointed see there weren't any significant difference.
+
+![image](./images/weights20.png)
+
+To understand better, it's necessary to also look at how these weights are combined in the final layer to output labels. The following image is taken from [here](https://ml4a.github.io/ml4a/looking_inside_neural_nets/). And they have a nice explanation.
+
+![image](./images/canvas.png)
