@@ -1,9 +1,10 @@
 Some thoughts from [Google's Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/).
 
+## Regularization
 From this [exercise](https://developers.google.com/machine-learning/crash-course/regularization-for-simplicity/playground-exercise-examining-l2-regularization):
 Sometimes, overfitting happens slowly. That's why early stopping does work.
 
-
+## Classification
 Some nots on ROC from [here](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc).
 
 Interpretation of AUC of ROC is the probability: P(f(positive sample) > f(negative sample))
@@ -14,9 +15,11 @@ AUC is classification-threshold-invariant.
 
 Check for Prediction Bias, which is average of predictions - average of labels in data set. Never thought about it this way. You can also bucket data points and check bias for each bucket.
 
-Sparcity:
+## Regularization Sparcity
 L0 optimization is non-convex and NP-hard. Think the knapsack problem. Think of L2 vs L1 this way. Derivative of L2 penalty is 2\*beta, which reduces a percentage of beta at each step. Derivative of L1 penalty is constant, which reduces a constant of beta at each step. This causes the sparsity of L1.  I still like the corners of the level curves argument better.
 
+
+## Neural networks
 An excellent exercise [here](https://developers.google.com/machine-learning/crash-course/introduction-to-neural-networks/playground-exercises)
 
 Some thoughts:
@@ -28,11 +31,11 @@ And part three shows that feature engineering goes a long way. It is makes a mod
 
 What is also interesting is the following. Say some configuration gives you a nice model and now you make it a little more complex. In theory, the function space is strictly larger and you should get results as least as good as the simpler model, but when running these trials, it often is not the case. A slightly more complex network structure sometimes doesn't let you replicate the performance of the simpler model.
 
-On training of neural networks:
+## training of neural networks:
 
 ReLu could die. We could get all values below zero, so are all the derivatives. This means, if a node's value before activation (sum(b\_i\*x)+b\_0, what is this called?) is < 0, then it will be stuck this way? In the playground exercise, just set a node's bias to a large negative number, the weights of that node will never change.
 
-On multi-class nets:
+## Multi-class NN:
 
 There are two ways. Say you have 5 classes.
 
@@ -57,3 +60,25 @@ I also trained a one-hidden layer network with 20 hidden nodes, which performed 
 To understand better, it's necessary to also look at how these weights are combined in the final layer to output labels. The following image is taken from [here](https://ml4a.github.io/ml4a/looking_inside_neural_nets/). And they have a nice explanation.
 
 ![image](./images/canvas.png)
+
+## Embedding
+
+Embeddings traditionally can be learned with PCA. 
+
+Word2vec. It is learned as hidden layers of a fake classification task.
+
+It could also be learned as hidden layers of your target task, as described in section "Training an Embedding as Part of a Larger Model." My question for the example is: if you hold out a few movies users did see as positive examples, how do you get negative example? Movies users haven't seen? It could simply be becase they haven't gotten to it.
+
+This section seems way to rushed.
+
+## Engineering
+
+Static vs Dynamic Training.
+
+Static vs Dynamic Inference (Prediction)
+
+Data dependencies: Feedback loop is interesting.
+
+## Real world
+
+Two very interesting real world examples about Label Leakage.
